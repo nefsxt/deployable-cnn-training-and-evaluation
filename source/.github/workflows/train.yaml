@@ -1,0 +1,27 @@
+name: Train CIFAR10 CNN
+
+on:
+  # Automatic trigger if anything in ./data changes
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/**'
+  # Manual trigger without any inputs 
+  workflow_dispatch:
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+    # Docker setup 
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build and run full stack (Docker)
+        run: |
+          docker-compose up --build --abort-on-container-exit
+
