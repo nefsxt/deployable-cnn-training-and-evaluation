@@ -6,3 +6,5 @@ Docker, MLflow, Docker Compose, and GitHub Actions were leveraged:
 - To provide a containerized and standardized environment
   &
 - To manage experiments and artifacts for scalable, observable ML development.
+
+Documentation can be found here: https://www.notion.so/Deployable-CIFAR-10-CNN-Classification-30292e7a5d418065aa79de052b8a7060?source=copy_link
